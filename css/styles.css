@@ -379,14 +379,23 @@ footer {
     text-decoration: underline;
 }
 
-/* ========== АДАПТИВНЫЕ ПРАВИЛА ========== */
-/* Планшеты и большие телефоны */
+/* ========== АДАПТИВНЫЕ ПРАВИЛА (с центрированием) ========== */
+/* Планшеты и большие телефоны (до 768px) */
 @media (max-width: 768px) {
     body {
         padding: 16px 12px;
     }
     .container {
         padding: 20px 16px;
+    }
+    /* Центрируем навигацию */
+    nav {
+        justify-content: center;
+    }
+    .language-switcher {
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
     }
     .profile-header {
         flex-direction: column;
@@ -403,14 +412,7 @@ footer {
     .subtitle {
         font-size: 0.8rem;
         margin-bottom: 20px;
-    }
-    nav {
-        justify-content: center;
-    }
-    .language-switcher {
-        margin-left: 0;
-        justify-content: center;
-        width: 100%;
+        text-align: center;
     }
     .card h3 {
         font-size: 1.1rem;
@@ -430,14 +432,21 @@ footer {
     .contact-label {
         width: 120px;
     }
+    /* Центрируем футер */
     .footer-content {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
         gap: 20px;
+    }
+    .footer-section {
+        text-align: center;
     }
     .footer-bottom {
         flex-direction: column;
-        gap: 10px;
+        justify-content: center;
         text-align: center;
+        gap: 10px;
     }
 }
 
@@ -449,6 +458,12 @@ footer {
     .container {
         padding: 16px 12px;
     }
+    nav {
+        gap: 12px;
+    }
+    nav a {
+        font-size: 0.75rem;
+    }
     .profile-photo {
         width: 70px;
         height: 70px;
@@ -458,9 +473,6 @@ footer {
     }
     .subtitle {
         font-size: 0.75rem;
-    }
-    nav a {
-        font-size: 0.8rem;
     }
     .card {
         padding: 14px 16px;
@@ -515,7 +527,6 @@ footer {
     object-fit: contain;
     border-radius: 12px;
     box-shadow: 0 0 30px rgba(0,0,0,0.6);
-    transition: transform 0.2s;
 }
 
 @keyframes fadeIn {
