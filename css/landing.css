@@ -165,7 +165,6 @@ body {
     50% { transform: scale(1.2); }
 }
 
-/* ========== АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ ========== */
 @media (max-width: 700px) {
     .language-container {
         padding: 30px 20px;
