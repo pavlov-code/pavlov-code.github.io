@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Павел Павлов – Программист, веб-разработчик</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css?v=2">
 </head>
 <body>
     <div class="container">
@@ -31,14 +31,12 @@
     </div>
 
     <script>
-        // Загружаем header и footer
         fetch('/template/header.html')
             .then(r => r.text())
             .then(html => {
                 document.querySelector('header').innerHTML = html;
-                // После загрузки header запускаем i18n
                 const script = document.createElement('script');
-                script.src = '/js/i18n.js';
+                script.src = '/js/i18n.js?v=2';
                 document.body.appendChild(script);
             })
             .catch(err => console.error('Header load error:', err));
