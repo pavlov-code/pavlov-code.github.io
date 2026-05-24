@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты | Павел Павлов</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <header></header>
+    <div class="profile-header">
+        <div class="profile-photo"></div>
+        <div class="profile-title">
+            <h1>Контакты</h1>
+            <div class="subtitle">Связь и сотрудничество</div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="contact-info">
+            <div class="contact-item"><span class="contact-label">📧 Email:</span><span class="contact-value"><a href="mailto:koare@hotmail.co.uk">koare@hotmail.co.uk</a></span><span class="copy-icon">📋</span></div>
+            <div class="contact-item"><span class="contact-label">📧 Резервный email:</span><span class="contact-value"><a href="mailto:pavlov16071977@gmail.com">pavlov16071977@gmail.com</a></span><span class="copy-icon">📋</span></div>
+            <div class="contact-item"><span class="contact-label">📱 Телефон (WhatsApp):</span><span class="contact-value"><a href="tel:+79873138213">+7 (987) 313-82-13</a></span><span class="copy-icon">📋</span></div>
+            <div class="contact-item"><span class="contact-label">💬 Telegram:</span><span class="contact-value"><a href="https://t.me/" target="_blank">@...</a></span><span class="copy-icon">📋</span></div>
+            <div class="contact-item"><span class="contact-label">🐙 GitHub:</span><span class="contact-value"><a href="https://github.com/pavlov-code" target="_blank">github.com/pavlov-code</a></span><span class="copy-icon">📋</span></div>
+            <div class="contact-item"><span class="contact-label">🎮 Discord:</span><span class="contact-value">(по запросу)</span><span class="copy-icon">📋</span></div>
+        </div>
+        <h2>Рабочее время</h2>
+        <div class="contact-info">
+            <div class="contact-item"><span class="contact-label">⏰ Часы работы:</span><span class="contact-value">Пн–Пт 10:00 – 19:00 (МСК)</span><span class="copy-icon">📋</span></div>
+            <div class="contact-item"><span class="contact-label">📅 Суббота:</span><span class="contact-value">12:00 – 16:00</span><span class="copy-icon">📋</span></div>
+            <div class="contact-item"><span class="contact-label">📅 Воскресенье:</span><span class="contact-value">Выходной</span><span class="copy-icon">📋</span></div>
+        </div>
+        <div style="margin-top:25px; padding:15px; background:#f5f5f5; border-radius:4px;">
+            <strong>🔔 Доступен для сотрудничества</strong><br>Фриланс-проекты, консультации, open-source.<br><small>Отвечаю в рабочее время. Готов к командировкам и переезду.</small>
+        </div>
+    </div>
+    <footer></footer>
+</div>
+<script>
+    fetch('/template/header.html').then(r=>r.text()).then(html=>{document.querySelector('header').innerHTML=html;const s=document.createElement('script');s.src='/js/i18n.js';document.body.appendChild(s);});
+    fetch('/template/footer.html').then(r=>r.text()).then(html=>document.querySelector('footer').innerHTML=html);
+</script>
+<script>
+    // Копирование контактов
+    document.querySelectorAll('.copy-icon').forEach(icon => {
+        icon.addEventListener('click', async (e) => {
+            let text = icon.parentElement.querySelector('.contact-value')?.innerText?.trim();
+            if (text && text !== '(по запросу)') {
+                await navigator.clipboard.writeText(text);
+                let toast = document.createElement('div');
+                toast.className = 'toast-notification';
+                toast.textContent = '📋 Скопировано!';
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 1500);
+            }
+        });
+    });
+</script>
+</body>
+</html>

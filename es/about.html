@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí | Pavel Pavlov</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <header></header>
+
+    <div class="profile-header">
+        <div class="profile-photo"></div>
+        <div class="profile-title">
+            <h1>Sobre <span>mí</span></h1>
+            <div class="subtitle">Programador desde 1986</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <p><strong>Pavel Pavlov</strong> — programador de ciclo completo, desarrollador web, diseñador, ingeniero. Más de 35 años de experiencia práctica.</p>
+        <h2>Experiencia laboral (cronología)</h2>
+        <ul>
+            <li><strong>1986–1994</strong> – Primeros programas en Fortran, Visual Basic, Turbo Pascal, scripts educativos para escuelas.</li>
+            <li><strong>1994–2004</strong> – Programación como hobby y en actividades profesionales (electrónica, electricidad del automóvil).</li>
+            <li><strong>2004–2006</strong> – Diseñador gráfico, diseñador web en el periódico "Vesti Ispanii".</li>
+            <li><strong>2006–2009</strong> – Diseñador y desarrollador web en la revista "Insight Ispaniya".</li>
+            <li><strong>2009–2013</strong> – Desarrollo freelance de sitios web y scripts.</li>
+            <li><strong>2013–2016</strong> – Programador web en la startup "Kommersant Server" (posteriormente sistema estatal "Mercury").</li>
+            <li><strong>2016–2017</strong> – Programador en OOO "OKB Razvitie", Engels.</li>
+            <li><strong>2021 – presente</strong> – Autónomo, freelancing, proyectos blockchain.</li>
+        </ul>
+        <h2>Habilidades clave</h2>
+        <ul>
+            <li>Backend: Python, PHP, Go, Rust, Node.js</li>
+            <li>Frontend: React, Vue, Angular, TypeScript, HTML5/CSS3</li>
+            <li>Bases de datos: MySQL, PostgreSQL, SQLite</li>
+            <li>Blockchain: MQL4, contratos inteligentes, dApps</li>
+            <li>Diseño: Photoshop, Illustrator, Figma, InDesign</li>
+            <li>3D: Rhino, Blender, Revit, 3ds Max</li>
+            <li>Ingeniería: STM32, Arduino, CAN, electricidad del automóvil</li>
+        </ul>
+        <h2>Educación</h2>
+        <p>Escuela secundaria (certificado por logros en informática), cursos "Publicidad y Diseño" (1998), educación superior incompleta (Colegio de Radioelectrónica de Saratov).</p>
+        <h2>Idiomas</h2>
+        <ul>
+            <li>Ruso – nativo</li>
+            <li>Español – C1–C2 (fluido)</li>
+            <li>Inglés – A2–B1 (lectura de documentación técnica)</li>
+        </ul>
+        <h2>Cualidades personales</h2>
+        <p>Responsabilidad, aprendizaje rápido, disposición para viajes de negocios y reubicación, trabajo en fines de semana. Primer grado en montañismo.</p>
+    </div>
+
+    <footer></footer>
+</div>
+
+<script>
+    fetch('/template/header.html')
+        .then(r => r.text())
+        .then(html => {
+            document.querySelector('header').innerHTML = html;
+            const script = document.createElement('script');
+            script.src = '/js/i18n.js';
+            document.body.appendChild(script);
+        })
+        .catch(err => console.error('Header load error:', err));
+    fetch('/template/footer.html')
+        .then(r => r.text())
+        .then(html => document.querySelector('footer').innerHTML = html)
+        .catch(err => console.error('Footer load error:', err));
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Pavel Pavlov</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <header></header>
+
+    <div class="profile-header">
+        <div class="profile-photo"></div>
+        <div class="profile-title">
+            <h1>Contact</h1>
+            <div class="subtitle">Communication and collaboration</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="contact-info">
+            <div class="contact-item"><span class="contact-label">📧 Email:</span><span class="contact-value"><a href="mailto:koare@hotmail.co.uk">koare@hotmail.co.uk</a></span><span class="copy-icon">📋</span></div>
+            <div class="contact-item"><span class="contact-label">📧 Backup email:</span><span class="contact-value"><a href="mailto:pavlov16071977@gmail.com">pavlov16071977@gmail.com</a></span><span class="copy-icon">📋</span></div>
+            <div class="contact-item"><span class="contact-label">📱 Phone (WhatsApp):</span><span class="contact-value"><a href="tel:+79873138213">+7 (987) 313-82-13</a></span><span class="copy-icon">📋</span></div>
+            <div class="contact-item"><span class="contact-label">💬 Telegram:</span><span class="contact-value"><a href="https://t.me/" target="_blank">@...</a></span><span class="copy-icon">📋</span></div>
+            <div class="contact-item"><span class="contact-label">🐙 GitHub:</span><span class="contact-value"><a href="https://github.com/pavlov-code" target="_blank">github.com/pavlov-code</a></span><span class="copy-icon">📋</span></div>
+            <div class="contact-item"><span class="contact-label">🎮 Discord:</span><span class="contact-value">(on request)</span><span class="copy-icon">📋</span></div>
+        </div>
+        <h2>Working hours</h2>
+        <div class="contact-info">
+            <div class="contact-item"><span class="contact-label">⏰ Business hours:</span><span class="contact-value">Mon–Fri 10:00 – 19:00 (MSK)</span><span class="copy-icon">📋</span></div>
+            <div class="contact-item"><span class="contact-label">📅 Saturday:</span><span class="contact-value">12:00 – 16:00</span><span class="copy-icon">📋</span></div>
+            <div class="contact-item"><span class="contact-label">📅 Sunday:</span><span class="contact-value">Day off</span><span class="copy-icon">📋</span></div>
+        </div>
+        <div style="margin-top:25px; padding:15px; background:#f5f5f5; border-radius:4px;">
+            <strong>🔔 Available for collaboration</strong><br>
+            Freelance projects, consulting, open-source.<br>
+            <small>I reply during working hours. Ready for business trips and relocation.</small>
+        </div>
+    </div>
+
+    <footer></footer>
+</div>
+
+<script>
+    fetch('/template/header.html')
+        .then(r => r.text())
+        .then(html => {
+            document.querySelector('header').innerHTML = html;
+            const script = document.createElement('script');
+            script.src = '/js/i18n.js';
+            document.body.appendChild(script);
+        })
+        .catch(err => console.error('Header load error:', err));
+    fetch('/template/footer.html')
+        .then(r => r.text())
+        .then(html => document.querySelector('footer').innerHTML = html)
+        .catch(err => console.error('Footer load error:', err));
+</script>
+<script>
+    document.querySelectorAll('.copy-icon').forEach(icon => {
+        icon.addEventListener('click', async (e) => {
+            let text = icon.parentElement.querySelector('.contact-value')?.innerText?.trim();
+            if (text && text !== '(on request)') {
+                await navigator.clipboard.writeText(text);
+                let toast = document.createElement('div');
+                toast.className = 'toast-notification';
+                toast.textContent = '📋 Copied!';
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 1500);
+            }
+        });
+    });
+</script>
+</body>
+</html>

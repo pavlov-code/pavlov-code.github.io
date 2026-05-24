@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | Pavel Pavlov</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <header></header>
+
+    <div class="profile-header">
+        <div class="profile-photo"></div>
+        <div class="profile-title">
+            <h1>Proyectos</h1>
+            <div class="subtitle">Más de 40 proyectos web y aplicaciones</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <p>A continuación se muestra una lista de sitios web y aplicaciones en los que participé (algunos como freelancer, otros como parte de un equipo).</p>
+        <div style="display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;">
+            <ul style="flex:1;min-width:200px;">
+                <li>alibababoard.com</li><li>arahnid.com</li><li>atlet.cafe</li><li>biospace-ark.com</li><li>businesstan.biz</li><li>casablancaresort.es</li><li>casas-prefabricados.com</li><li>costareal.eu</li><li>crowdsyn.com</li><li>crypto-advance.com</li><li>ditorg.com</li><li>dvdmoviegalaxy.com</li><li>ebusinesstranslate.com</li><li>exportboard.com</li>
+            </ul>
+            <ul style="flex:1;min-width:200px;">
+                <li>forexample.info</li><li>funbuysell.com</li><li>goldwynsfinancial.co.uk</li><li>guardmarket.ru</li><li>investclub1000.com</li><li>irimarsystem.com</li><li>kibersyn.com</li><li>kommersant-server.com</li><li>livegalaxy.biz</li><li>luxarian.com</li><li>market.uk</li><li>my102030.com</li><li>newcybersyn.com</li><li>remtrackavto.com</li>
+            </ul>
+            <ul style="flex:1;min-width:200px;">
+                <li>sitara-koare.com</li><li>sitara-properties.com</li><li>sitarainternational.com</li><li>sitaramasterbuilders.com</li><li>softtranslate.com</li><li>vesti.es</li><li>vikingrenewable.com</li><li>vikingsolargroup.com</li><li>villadelacosta.com</li><li>villamartinhills.com</li><li>warmap.ru</li><li>wavesforum.ru</li><li>web-log-magazine.com</li><li>worldagent.org</li><li>zeelandex.com</li>
+            </ul>
+        </div>
+        <p>También desarrollé robots de trading para MetaTrader (MQL4), bots de Telegram, aplicaciones de escritorio en Python (PyQt5), modelos 3D para impresión.</p>
+    </div>
+
+    <footer></footer>
+</div>
+
+<script>
+    fetch('/template/header.html')
+        .then(r => r.text())
+        .then(html => {
+            document.querySelector('header').innerHTML = html;
+            const script = document.createElement('script');
+            script.src = '/js/i18n.js';
+            document.body.appendChild(script);
+        })
+        .catch(err => console.error('Header load error:', err));
+    fetch('/template/footer.html')
+        .then(r => r.text())
+        .then(html => document.querySelector('footer').innerHTML = html)
+        .catch(err => console.error('Footer load error:', err));
+</script>
+</body>
+</html>

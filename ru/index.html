@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Павел Павлов – Программист, веб-разработчик</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header></header>
+
+        <div class="profile-header">
+            <div class="profile-photo"></div>
+            <div class="profile-title">
+                <h1>Павел <span>Петрович</span></h1>
+                <div class="subtitle">Программист · Веб-разработчик · Универсал</div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card"><div class="emoji">💻</div><h3>Полный стек веб-разработки</h3><p><strong>Backend:</strong> Python (Django, Flask, FastAPI), PHP (Laravel, Symfony), Go, Node.js, Rust<br><strong>Frontend:</strong> React, Vue, Angular, TypeScript, HTML5/CSS3</p></div>
+            <div class="card"><div class="emoji">⛓️</div><h3>Блокчейн и криптоиндустрия</h3><p>Торговые роботы (MQL4), смарт-контракты, dApps на Go, Rust, C++.</p></div>
+            <div class="card"><div class="emoji">🎨</div><h3>Дизайн и 3D-моделирование</h3><p>Adobe Creative Suite, Figma, Rhino 3D, Blender, Revit. Логотипы, полиграфия, интерьеры.</p></div>
+            <div class="card"><div class="emoji">🔌</div><h3>Радиоэлектроника / Автоэлектрика</h3><p>STM32, Arduino, CAN-шина, диагностика MAN, Volvo, SCANIA, сборка троллейбусов.</p></div>
+            <div class="card"><div class="emoji">📊</div><h3>Базы данных</h3><p>MySQL, PostgreSQL, SQLite. Проектирование, оптимизация запросов, интеграция.</p></div>
+            <div class="card"><div class="emoji">🛠️</div><h3>DevOps & Инструменты</h3><p>Git, Docker, CI/CD, Linux, bash. Полный цикл – от ТЗ до поддержки.</p></div>
+        </div>
+
+        <footer></footer>
+    </div>
+
+    <script>
+        // Загружаем header и footer
+        fetch('/template/header.html')
+            .then(r => r.text())
+            .then(html => {
+                document.querySelector('header').innerHTML = html;
+                // После загрузки header запускаем i18n
+                const script = document.createElement('script');
+                script.src = '/js/i18n.js';
+                document.body.appendChild(script);
+            })
+            .catch(err => console.error('Header load error:', err));
+        
+        fetch('/template/footer.html')
+            .then(r => r.text())
+            .then(html => document.querySelector('footer').innerHTML = html)
+            .catch(err => console.error('Footer load error:', err));
+    </script>
+</body>
+</html>

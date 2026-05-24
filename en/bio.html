@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biography | Pavel Pavlov</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .bio-section {
+            margin-bottom: 2rem;
+            border-left: 3px solid #000;
+            padding-left: 1.2rem;
+        }
+        .bio-section h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .bio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .skill-tag {
+            background: #f0f0f0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin: 0.2rem;
+        }
+        @media (max-width: 600px) {
+            .bio-section { padding-left: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header></header>
+
+    <div class="profile-header">
+        <div class="profile-photo"></div>
+        <div class="profile-title">
+            <h1>Biography</h1>
+            <div class="subtitle">Programmer · Engineer · Designer · Security — 35+ years of experience</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- General info -->
+        <div class="bio-section">
+            <h2>📌 Personal information</h2>
+            <p><strong>Pavel Petrovich Pavlov</strong>, born July 16, 1977 at Lebedevo station, Engels district, Saratov region. Since 1979 lives in the settlement named after Karl Marx. Unmarried, has children. Valid international passport. No criminal record.</p>
+        </div>
+
+        <!-- Education -->
+        <div class="bio-section">
+            <h2>🎓 Education & training</h2>
+            <ul>
+                <li><strong>1984–1994</strong> – Oktyabrskaya secondary school (10 grades). Awards in computer science, biology, zoology.</li>
+                <li><strong>1994</strong> – enrolled in Saratov College of Radioelectronics named after P.N. Yablochkov.</li>
+                <li><strong>1995</strong> – DOSAAF courses: radio mechanic (TV/radio equipment), telegraphist.</li>
+                <li><strong>1998</strong> – “Advertising and Design” courses (specialist certificate).</li>
+                <li><strong>Clubs</strong> – puppet theatre, library science, amateur radio, boxing, wrestling, mountaineering, orienteering, cinema mechanics, photography, young naturalists, military shooting, young technician.</li>
+            </ul>
+        </div>
+
+        <!-- Military service -->
+        <div class="bio-section">
+            <h2>⚓ Military service (1995–1997)</h2>
+            <ul>
+                <li>Naval border troops, military transport ship, Kamchatka.</li>
+                <li>Positions: radio mechanic, radio operator, telegraphist. Repair of shipborne radio stations, weather stations, navigation equipment.</li>
+                <li>Conducted military‑sports training for schoolchildren, seminars, and the “Zarnitsa” game.</li>
+            </ul>
+        </div>
+
+        <!-- Work experience (key stages) -->
+        <div class="bio-section">
+            <h2>💼 Work experience (key stages)</h2>
+            <div class="bio-grid">
+                <ul style="margin:0">
+                    <li><strong>1991–1994</strong> – disco host at Oktyabrsky House of Culture.</li>
+                    <li><strong>1998</strong> – armed guard at Khimvolokno plant.</li>
+                    <li><strong>1998–2001</strong> – bodyguard at private security company Fort-98.</li>
+                    <li><strong>2001</strong> – auto electrician (KAMAZ, MAZ, PAZ, LIAZ).</li>
+                    <li><strong>2001–2002</strong> – fruit harvesting in Spain, learning Spanish.</li>
+                    <li><strong>2002–2004</strong> – construction of pools and houses in Spain.</li>
+                    <li><strong>2004–2006</strong> – graphic designer, layout artist, web designer at “Vesti Ispanii” newspaper.</li>
+                    <li><strong>2006–2009</strong> – graphic designer and web developer at “Insight” magazine (studied English).</li>
+                    <li><strong>2009–2010</strong> – plant security, part‑time auto electrician.</li>
+                    <li><strong>2010–2012</strong> – construction worker, electrician, industrial automation technician at an oil depot.</li>
+                    <li><strong>2012–2013</strong> – auto mechanic, auto electrician, assembler at Trolza plant (trolleybuses).</li>
+                    <li><strong>2013</strong> – assembly and configuration of SCANIA buses for Sochi 2014 Olympics (GolAZ).</li>
+                    <li><strong>2013–2015</strong> – auto electrician/diagnostician for MAN, Volvo, Renault trucks.</li>
+                    <li><strong>2013–2016</strong> – web programmer at “Kommersant Server” startup (later state system “Mercury”).</li>
+                    <li><strong>2016–2017</strong> – programmer at “OKB Razvitie”.</li>
+                    <li><strong>2017</strong> – installation of CCTV in Moscow, concrete worker in Moscow City.</li>
+                    <li><strong>2017–2021</strong> – security service at Sochi Olympic Park (installation and maintenance of CCTV and radio systems).</li>
+                    <li><strong>2021 – present</strong> – self‑employed: web development, freelancing, repair of electronics and vehicles.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Key skills -->
+        <div class="bio-section">
+            <h2>🧠 Key skills</h2>
+            <div>
+                <span class="skill-tag">💻 Python / Django / FastAPI</span>
+                <span class="skill-tag">🐘 PHP / Laravel / Symfony</span>
+                <span class="skill-tag">🦀 Go / Rust / Node.js</span>
+                <span class="skill-tag">⚛️ React / Vue / Angular</span>
+                <span class="skill-tag">🗄️ MySQL / PostgreSQL / SQLite</span>
+                <span class="skill-tag">⛓️ MQL4 / smart contracts / dApps</span>
+                <span class="skill-tag">🎨 Photoshop / Illustrator / Figma / InDesign</span>
+                <span class="skill-tag">🖌️ Rhino 3D / Blender / Revit / 3ds Max</span>
+                <span class="skill-tag">🔧 STM32 / Arduino / CAN / auto electrics</span>
+                <span class="skill-tag">🚛 Diagnostics MAN, Volvo, SCANIA, Renault</span>
+                <span class="skill-tag">🛠️ Liftgates / Webasto / Eberspächer heaters</span>
+                <span class="skill-tag">📹 CCTV / access control / radio systems</span>
+                <span class="skill-tag">🔫 Firearms training / bodyguard</span>
+                <span class="skill-tag">🏗️ Construction / finishing / plumbing / electrical</span>
+            </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="bio-section">
+            <h2>🗣️ Languages</h2>
+            <ul>
+                <li><strong>Russian</strong> – native</li>
+                <li><strong>Spanish</strong> – C1–C2 (fluent)</li>
+                <li><strong>English</strong> – A2–B1 (reading technical documentation)</li>
+            </ul>
+        </div>
+
+        <!-- Sports -->
+        <div class="bio-section">
+            <h2>🏆 Sports & achievements</h2>
+            <ul>
+                <li>First rank in mountaineering.</li>
+                <li>Boxing, wrestling, orienteering.</li>
+                <li>Blind typing on telegraph (320–1600 chars/min), Morse code.</li>
+            </ul>
+        </div>
+
+        <!-- Personal qualities -->
+        <div class="bio-section">
+            <h2>⭐ Personal qualities & readiness</h2>
+            <p>Responsibility, fast learning, ready for business trips and relocation, weekend work. Valid international passport. No criminal record.</p>
+            <p><strong>💰 Salary expectations:</strong> from 2300 EUR per month (negotiable).</p>
+        </div>
+
+        <!-- Handyman section -->
+        <div class="bio-section">
+            <h2>🪛 Handyman (jack of all trades)</h2>
+            <p>Plumbing, electrical, furniture assembly, appliance repair, gardening, pest control, tile laying, window/door installation, underfloor heating – over 100 types of home and garden tasks.</p>
+        </div>
+    </div>
+
+    <footer></footer>
+</div>
+
+<script>
+    fetch('/template/header.html')
+        .then(r => r.text())
+        .then(html => {
+            document.querySelector('header').innerHTML = html;
+            const script = document.createElement('script');
+            script.src = '/js/i18n.js';
+            document.body.appendChild(script);
+        })
+        .catch(err => console.error('Header load error:', err));
+    fetch('/template/footer.html')
+        .then(r => r.text())
+        .then(html => document.querySelector('footer').innerHTML = html)
+        .catch(err => console.error('Footer load error:', err));
+</script>
+</body>
+</html>

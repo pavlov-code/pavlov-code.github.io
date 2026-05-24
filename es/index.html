@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pavel Pavlov – Programador Full‑stack</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <header></header>
+    <div class="profile-header">
+        <div class="profile-photo"></div>
+        <div class="profile-title">
+            <h1>Pavel <span>Pavlov</span></h1>
+            <div class="subtitle">Programador · Diseñador · Ingeniero</div>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="card"><div class="emoji">💻</div><h3>Desarrollo Full‑stack</h3><p><strong>Backend:</strong> Python (Django, Flask, FastAPI), PHP (Laravel, Symfony), Go, Node.js, Rust<br><strong>Frontend:</strong> React, Vue, Angular, TypeScript, HTML5/CSS3</p></div>
+        <div class="card"><div class="emoji">⛓️</div><h3>Blockchain y Cripto</h3><p>Robots de trading (MQL4), contratos inteligentes, dApps en Go, Rust, C++.</p></div>
+        <div class="card"><div class="emoji">🎨</div><h3>Diseño y 3D</h3><p>Adobe Creative Suite, Figma, Rhino 3D, Blender, Revit. Logotipos, impresión, interiores.</p></div>
+        <div class="card"><div class="emoji">🔌</div><h3>Electrónica / Automoción</h3><p>STM32, Arduino, bus CAN, diagnóstico MAN, Volvo, SCANIA.</p></div>
+        <div class="card"><div class="emoji">📊</div><h3>Bases de datos</h3><p>MySQL, PostgreSQL, SQLite. Diseño, optimización, integración.</p></div>
+        <div class="card"><div class="emoji">🛠️</div><h3>DevOps y Herramientas</h3><p>Git, Docker, CI/CD, Linux, bash. Ciclo completo.</p></div>
+    </div>
+    <footer></footer>
+</div>
+<script>
+    fetch('/template/header.html').then(r=>r.text()).then(html=>{document.querySelector('header').innerHTML=html;const s=document.createElement('script');s.src='/js/i18n.js';document.body.appendChild(s);});
+    fetch('/template/footer.html').then(r=>r.text()).then(html=>document.querySelector('footer').innerHTML=html);
+</script>
+</body>
+</html>
