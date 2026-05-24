@@ -12,13 +12,13 @@ body {
     background: #ffffff;
     border-radius: 4px;
     padding: 40px 30px;
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     box-shadow: 0 5px 30px rgba(255,255,255,0.1);
     text-align: center;
     display: flex;
     flex-direction: column;
-    min-height: 500px;
+    min-height: auto;
 }
 
 .language-container h1 {
@@ -165,16 +165,70 @@ body {
     50% { transform: scale(1.2); }
 }
 
+/* ========== АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ ========== */
 @media (max-width: 700px) {
-    .language-container { padding: 30px 20px; }
-    .language-container h1 { font-size: 2.4rem; }
-    .language-card { min-width: 160px; }
-    .language-flag { width: 100px; height: 75px; }
+    .language-container {
+        padding: 30px 20px;
+    }
+    .language-container h1 {
+        font-size: 2rem;
+    }
+    .language-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .language-card {
+        flex-direction: row;
+        max-width: 320px;
+        min-width: 260px;
+        padding: 15px 25px;
+        gap: 25px;
+        text-align: left;
+        align-items: center;
+    }
+    .language-flag {
+        width: 70px;
+        height: 55px;
+    }
+    .language-name {
+        border-top: none;
+        padding-top: 0;
+        width: auto;
+        font-size: 1.1rem;
+    }
+    .footer-content {
+        gap: 12px;
+    }
+    .copyright, .github-link, .made-with-love {
+        font-size: 0.8rem;
+    }
 }
 
-@media (max-width: 500px) {
-    .language-grid { flex-direction: column; align-items: center; }
-    .language-card { flex-direction: row; max-width: 320px; padding: 15px 25px; gap: 25px; text-align: left; }
-    .language-flag { width: 80px; height: 60px; }
-    .language-name { border-top: none; padding-top: 0; width: auto; }
+@media (max-width: 480px) {
+    .language-container {
+        padding: 20px 16px;
+    }
+    .language-container h1 {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+    .language-card {
+        min-width: 240px;
+        padding: 12px 20px;
+        gap: 20px;
+    }
+    .language-flag {
+        width: 55px;
+        height: 42px;
+    }
+    .language-name {
+        font-size: 1rem;
+    }
+    .copyright, .github-link, .made-with-love {
+        font-size: 0.7rem;
+    }
+    .heart {
+        font-size: 1rem;
+    }
 }
