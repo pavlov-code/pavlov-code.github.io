@@ -11,32 +11,33 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 30px 20px;
+    padding: 20px 16px;
 }
 
 .container {
     background: #ffffff;
     border-radius: 4px;
-    padding: 30px 25px;
-    max-width: 1100px;
+    padding: 24px 20px;
+    max-width: 1200px;
     width: 100%;
     box-shadow: 0 5px 20px rgba(255,255,255,0.05);
 }
 
+/* ========== НАВИГАЦИЯ ========== */
 nav {
-    margin-bottom: 30px;
-    padding-bottom: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
     border-bottom: 1px solid #e0e0e0;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 16px;
     align-items: center;
 }
 
 nav a {
     color: #222222;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.3px;
     text-transform: uppercase;
@@ -57,9 +58,10 @@ nav a.active {
 
 .language-switcher {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     margin-left: auto;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .language-switcher a {
@@ -67,7 +69,7 @@ nav a.active {
     align-items: center;
     gap: 4px;
     text-transform: none;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     padding: 4px 8px;
     background: #f5f5f5;
     border-radius: 4px;
@@ -90,6 +92,7 @@ nav a.active {
     border-radius: 2px;
 }
 
+/* ========== ПРОФИЛЬ ========== */
 .profile-header {
     display: flex;
     align-items: center;
@@ -97,6 +100,7 @@ nav a.active {
     margin-bottom: 25px;
     padding-bottom: 20px;
     border-bottom: 1px solid #e0e0e0;
+    flex-wrap: wrap;
 }
 
 .profile-photo {
@@ -110,7 +114,7 @@ nav a.active {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    cursor: pointer; /* Добавлено для лайтбокса — указатель, что фото кликабельно */
+    cursor: pointer;
     transition: transform 0.2s;
 }
 
@@ -125,7 +129,7 @@ nav a.active {
 }
 
 .profile-title h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #111111;
     margin-bottom: 5px;
     font-weight: 500;
@@ -138,15 +142,16 @@ nav a.active {
 }
 
 .subtitle {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #555555;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
     border-bottom: 1px solid #e0e0e0;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
+/* ========== СЕТКА КАРТОЧЕК ========== */
 .grid {
     display: flex;
     flex-direction: column;
@@ -204,11 +209,12 @@ nav a.active {
     font-weight: 500;
 }
 
+/* ========== КОНТЕНТ (текстовые страницы) ========== */
 .content {
     background: white;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
-    padding: 25px;
+    padding: 20px;
     margin: 25px 0;
     line-height: 1.5;
     color: #222222;
@@ -231,6 +237,7 @@ nav a.active {
     margin-bottom: 15px;
 }
 
+/* ========== КОНТАКТЫ ========== */
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -245,6 +252,7 @@ nav a.active {
     padding: 6px 10px;
     border-radius: 6px;
     transition: background 0.2s;
+    flex-wrap: wrap;
 }
 
 .contact-item:hover {
@@ -252,7 +260,7 @@ nav a.active {
 }
 
 .contact-label {
-    width: 160px;
+    width: 150px;
     flex-shrink: 0;
     font-weight: 600;
     display: flex;
@@ -301,6 +309,7 @@ nav a.active {
     100% { opacity: 0; transform: translateY(-10px); }
 }
 
+/* ========== ФУТЕР ========== */
 footer {
     margin-top: 40px;
     padding-top: 25px;
@@ -370,20 +379,118 @@ footer {
     text-decoration: underline;
 }
 
-@media (max-width: 700px) {
-    .container { padding: 20px; }
-    .profile-header { flex-direction: column; text-align: center; gap: 15px; }
-    .profile-title h1 { font-size: 1.8rem; }
-    .language-switcher { margin-left: 0; width: 100%; justify-content: center; }
-    .contact-label { width: 120px; }
-    .footer-content { flex-direction: column; gap: 20px; }
-    .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+/* ========== АДАПТИВНЫЕ ПРАВИЛА ========== */
+/* Планшеты и большие телефоны */
+@media (max-width: 768px) {
+    body {
+        padding: 16px 12px;
+    }
+    .container {
+        padding: 20px 16px;
+    }
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+    }
+    .profile-title h1 {
+        font-size: 1.6rem;
+    }
+    .subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+    }
+    nav {
+        justify-content: center;
+    }
+    .language-switcher {
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+    }
+    .card h3 {
+        font-size: 1.1rem;
+    }
+    .card p {
+        font-size: 0.85rem;
+    }
+    .content {
+        padding: 16px;
+    }
+    .content h2 {
+        font-size: 1.2rem;
+    }
+    .content p, .content li {
+        font-size: 0.9rem;
+    }
+    .contact-label {
+        width: 120px;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
 }
 
-@media (max-width: 500px) {
-    .contact-item { flex-wrap: wrap; }
-    .contact-label { width: 100%; margin-bottom: 4px; }
-    .contact-value { width: calc(100% - 40px); }
+/* Маленькие телефоны (ширина до 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 12px 8px;
+    }
+    .container {
+        padding: 16px 12px;
+    }
+    .profile-photo {
+        width: 70px;
+        height: 70px;
+    }
+    .profile-title h1 {
+        font-size: 1.4rem;
+    }
+    .subtitle {
+        font-size: 0.75rem;
+    }
+    nav a {
+        font-size: 0.8rem;
+    }
+    .card {
+        padding: 14px 16px;
+    }
+    .card h3 {
+        font-size: 1rem;
+    }
+    .card p {
+        font-size: 0.8rem;
+    }
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .contact-label {
+        width: 100%;
+    }
+    .contact-value {
+        width: 100%;
+    }
+    .content {
+        padding: 12px;
+    }
+    .content h2 {
+        font-size: 1.1rem;
+    }
+    .footer-section {
+        min-width: 100%;
+    }
 }
 
 /* ========== LIGHTBOX (всплывающее окно для фото) ========== */
