@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Pavel Pavlov</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css?v=2">
 </head>
 <body>
 <div class="container">
@@ -20,14 +20,14 @@
 
     <div class="content">
         <p>Below is a list of websites and applications I contributed to (some as a freelancer, some as part of a team).</p>
-        <div style="display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;">
-            <ul style="flex:1;min-width:200px;">
+        <div class="projects-list">
+            <ul>
                 <li>alibababoard.com</li><li>arahnid.com</li><li>atlet.cafe</li><li>biospace-ark.com</li><li>businesstan.biz</li><li>casablancaresort.es</li><li>casas-prefabricados.com</li><li>costareal.eu</li><li>crowdsyn.com</li><li>crypto-advance.com</li><li>ditorg.com</li><li>dvdmoviegalaxy.com</li><li>ebusinesstranslate.com</li><li>exportboard.com</li>
             </ul>
-            <ul style="flex:1;min-width:200px;">
+            <ul>
                 <li>forexample.info</li><li>funbuysell.com</li><li>goldwynsfinancial.co.uk</li><li>guardmarket.ru</li><li>investclub1000.com</li><li>irimarsystem.com</li><li>kibersyn.com</li><li>kommersant-server.com</li><li>livegalaxy.biz</li><li>luxarian.com</li><li>market.uk</li><li>my102030.com</li><li>newcybersyn.com</li><li>remtrackavto.com</li>
             </ul>
-            <ul style="flex:1;min-width:200px;">
+            <ul>
                 <li>sitara-koare.com</li><li>sitara-properties.com</li><li>sitarainternational.com</li><li>sitaramasterbuilders.com</li><li>softtranslate.com</li><li>vesti.es</li><li>vikingrenewable.com</li><li>vikingsolargroup.com</li><li>villadelacosta.com</li><li>villamartinhills.com</li><li>warmap.ru</li><li>wavesforum.ru</li><li>web-log-magazine.com</li><li>worldagent.org</li><li>zeelandex.com</li>
             </ul>
         </div>
@@ -43,7 +43,7 @@
         .then(html => {
             document.querySelector('header').innerHTML = html;
             const script = document.createElement('script');
-            script.src = '/js/i18n.js';
+            script.src = '/js/i18n.js?v=2';
             document.body.appendChild(script);
         })
         .catch(err => console.error('Header load error:', err));
